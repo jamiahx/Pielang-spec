@@ -1,0 +1,19 @@
+Expressions are structered through lists or sets.
+A list is a collection of sequentially ordered expressions separated by ';'. For example:
+	{ a ; b ; c ; d }
+To nest lists, use a list as an expression to another list:
+	{	a
+	;	{ b ; c }
+	;	d
+	;	e
+	}
+A set is an unordered collection of expressions separated by ','. For example:
+	{ a , b , c , d }
+A set indicates that there is no guaranteed order of its elements. Thus its elements may be processed out-of-order
+or in parallel.
+
+An enumeration or enum, is a mutually exclusive collection of expressions separated by '|'. For example:
+	{ a | b | c | d }
+Until it is determined which element an enum instance expresses, the instance may be considered a superposition of
+the enum's elements, and may be processed ahead of time so long as the superposition is either retained until the
+root superposition is resolved or the possibilities resolve by convergence.
