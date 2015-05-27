@@ -1,0 +1,7 @@
+An expression may be enclosed by certain scopes.
+
+The identity scope, '{' and '}', returns the enclosed expression by anonymous name.
+
+The value scope, '(' and ')', returns the anonymous value of the enclosed expression(similar to a c++ rvalue).
+
+The type scope, '<' and '>', establishes type using the enclosed expression.
