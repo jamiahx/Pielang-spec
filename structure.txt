@@ -17,3 +17,6 @@ An enumeration or enum, is a mutually exclusive collection of expressions separa
 Until it is determined which element an enum instance expresses, the instance may be considered a superposition of
 the enum's elements, and may be processed ahead of time so long as the superposition is either retained until the
 root superposition is resolved or the possibilities resolve by convergence.
+
+To access a member, we use ':'. If we have some structure "foo" that contains the externally accessible member "bar",
+the expression "foo:bar" returns the member "bar".
