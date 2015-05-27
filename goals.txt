@@ -1,0 +1,2 @@
+1.	Structure is apparent and unambiguous
+2.	Simple concurrency shall be no more difficult to write than sequence
