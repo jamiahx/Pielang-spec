@@ -4,16 +4,19 @@ The type of all classes is the "class" class and the parent classes/interfaces (
 
 Suppose we wish to declare a class of a pair of bools. We could use the following:
 	pair_bool
-	:=	{	type = { global:class; global:foo:pair }
+	:=	{	type = { global:class }
 		;	value
-			= 	{	bool:value first
-				;	bool:value second
+			= 	global:foo:pair:value
+			&	{	global:bool:value first
+				;	global:bool:value second
 				}:type
 		}
 
-However, this looks weird and contains a lot of boilerplate; thus we are afforded the <> syntactic sugar:
-	(class & global:foo:pair)
-	pair_bool 
-	= 	<	(bool) first
-		;	(bool) second
+However, this looks weird and contains a lot of boilerplate; thus we are afforded the <>, (), and 
+implied global namespace syntactic sugar:
+	(:class)
+	pair_bool
+	= 	(:foo:pair)
+	&	<	(:bool) first
+		;	(:bool) second
 		>
