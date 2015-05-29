@@ -1,12 +1,19 @@
-Suppose we wish to globally declare a class of a pair of bools. We could use the following:
-	{class pair_bool}
-	:	type
-		= 	{	bool:type first
-			;	bool:type second
-			} 	
-			:	type
+The "class" class is the class of all classes, aka the universe class, and is in the global namespace.
+
+The type of all classes is the "class" class and the parent classes/interfaces (inheritance).
+
+Suppose we wish to declare a class of a pair of bools. We could use the following:
+	pair_bool
+	:=	{	type = { global:class; global:foo:pair }
+		;	value
+			= 	{	bool:value first
+				;	bool:value second
+				}:type
+		}
+
 However, this looks weird and contains a lot of boilerplate; thus we are afforded the <> syntactic sugar:
-	<class pair_bool> 
-	= 	<	<bool> first
-		;	<bool> second
+	(class & global:foo:pair)
+	pair_bool 
+	= 	<	(bool) first
+		;	(bool) second
 		>
