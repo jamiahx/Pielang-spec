@@ -3,5 +3,13 @@ An expression may be enclosed by certain scopes.
 The identity scope, '{' and '}', returns the enclosed expression by anonymous name.
 
 The value scope, '(' and ')', returns the anonymous value of the enclosed expression(similar to a c++ rvalue).
+It is syntactic sugur for accessing the literal "value" subname of the given name. For example:
+	(foo)
+is equivalent to:
+	foo:value
 
-The type scope, '<' and '>', establishes type using the enclosed expression.
+The type scope, '<' and '>', returns the type of the enclosed expression.
+It is syntactic sugar for accessing the literal "type" subname of the given name. For example:
+	<bar>
+is equivalent to:
+	bar:type
