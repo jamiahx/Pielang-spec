@@ -6,17 +6,19 @@ Suppose we wish to declare a class of a pair of bools. We could use the followin
 	pair_bool
 	:=	{	type = { global:class }
 		;	value
-			= 	global:foo:pair:value
-			&	{	global:bool:value first
-				;	global:bool:value second
-				}:type
+			= 	{	global:foo:pair:value
+				&	{	global:bool:value first
+					;	global:bool:value second
+					}:type
+				}
 		}
 
 However, this looks weird and contains a lot of boilerplate; thus we are afforded the <>, (), and 
 implied global namespace syntactic sugar:
 	(:class)
 	pair_bool
-	= 	(:foo:pair)
-	&	<	(:bool) first
-		;	(:bool) second
-		>
+	= 	{	(:foo:pair)
+		&	<	(:bool) first
+			;	(:bool) second
+			>
+		}
