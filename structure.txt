@@ -19,4 +19,4 @@ the enum's elements, and may be processed ahead of time so long as the superposi
 root superposition is resolved or the possibilities resolve by convergence.
 
 To access a member, we use ':'. If we have some structure "foo" that contains the externally accessible member "bar",
-the expression "foo:bar" returns the member "bar".
+the expression "bar:foo" (bar of foo) returns the member "bar".
