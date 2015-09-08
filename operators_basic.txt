@@ -1,0 +1,29 @@
+Standard Pielang files shall implicitly include a universe of basic operations.
+
+They are the following operations:
+names
+list
+set
+sym
+add
+subt
+mult
+div
+mod
+intdiv
+exp
+log
+ln
+fact
+AND
+NAND
+OR
+NOR
+XOR
+NOT
+is
+isnt
+less
+leq
+greater
+geq
